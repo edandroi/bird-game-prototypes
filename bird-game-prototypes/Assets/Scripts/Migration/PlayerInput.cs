@@ -9,11 +9,20 @@ public class PlayerInput : MonoBehaviour
 	private Rigidbody2D rb;
 	float force = 100f;
 	private float currentForce;
+
+	private SpriteRenderer playerSprite;
+	private Sprite[] sprites;
+	public Sprite birdUp;
+	public Sprite birdDown;
+
 	
 	// Use this for initialization
 	void Start ()
 	{
+//		sprites = Resources.LoadAll<Sprite>("bird-blue-1", "bird-blue-2");
 		rb = GetComponent<Rigidbody2D>();
+		playerSprite = GetComponent<SpriteRenderer>();
+//		birdDown = Resources.Load<Sprite>("bird-blue-2");
 		currentForce = force;
 	}
 	
@@ -24,10 +33,12 @@ public class PlayerInput : MonoBehaviour
 		if (Input.GetKey(up))
 		{
 			currentForce += 10;
+			playerSprite.sprite = birdDown;
 		}
 
 		if (Input.GetKeyUp(up))
 		{
+			playerSprite.sprite = birdUp;
 			rb.AddForce(transform.up*currentForce);
 			currentForce = force;
 		}

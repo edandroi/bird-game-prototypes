@@ -14,15 +14,49 @@
       <file leaf-file-name="PlayerInput.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Migration/PlayerInput.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="540">
+              <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding>
-                <marker date="1536352852000" expanded="false" signature="6:78" ph="..." />
-                <marker date="1536352852000" expanded="true" signature="120:557" ph="{...}" />
-                <marker date="1536352852000" expanded="true" signature="267:333" ph="{...}" />
-                <marker date="1536352852000" expanded="true" signature="387:555" ph="{...}" />
-                <marker date="1536352852000" expanded="true" signature="417:448" ph="{...}" />
-                <marker date="1536352852000" expanded="true" signature="475:551" ph="{...}" />
+                <marker date="1536426189000" expanded="true" signature="6:78" ph="..." />
+                <marker date="1536426189000" expanded="true" signature="120:914" ph="{...}" />
+                <marker date="1536426189000" expanded="true" signature="382:622" ph="{...}" />
+                <marker date="1536426189000" expanded="true" signature="676:912" ph="{...}" />
+                <marker date="1536426189000" expanded="true" signature="706:772" ph="{...}" />
+                <marker date="1536426189000" expanded="true" signature="799:908" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/Player.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1536350314000" expanded="false" signature="6:97" ph="..." />
+                <marker date="1536350314000" expanded="true" signature="134:989" ph="{...}" />
+                <marker date="1536350314000" expanded="true" signature="431:537" ph="{...}" />
+                <marker date="1536350314000" expanded="true" signature="591:987" ph="{...}" />
+                <marker date="1536350314000" expanded="true" signature="737:809" ph="{...}" />
+                <marker date="1536350314000" expanded="true" signature="837:900" ph="{...}" />
+                <marker date="1536350314000" expanded="true" signature="929:984" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeColor.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/ChangeColor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1536350242000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1536350242000" expanded="true" signature="120:1420" ph="{...}" />
+                <marker date="1536350242000" expanded="true" signature="327:427" ph="{...}" />
+                <marker date="1536350242000" expanded="true" signature="430:1394" ph="/* void OnGUI() ... */" />
+                <marker date="1536350242000" expanded="true" signature="1411:1418" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -31,7 +65,9 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Migration/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/ChangeColor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,7 +87,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="506" />
+    <option name="x" value="320" />
     <option name="y" value="23" />
     <option name="width" value="934" />
     <option name="height" value="799" />
@@ -118,12 +154,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536348297721</updated>
-      <workItem from="1536348301141" duration="4138000" />
+      <workItem from="1536348301141" duration="5096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4138000" />
+    <option name="totallyTimeSpent" value="5096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -135,7 +171,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="506" y="23" width="934" height="799" extended-state="0" />
+    <frame x="320" y="23" width="934" height="799" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -204,17 +240,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1536350314000" expanded="false" signature="6:97" ph="..." />
+            <marker date="1536350314000" expanded="true" signature="134:989" ph="{...}" />
+            <marker date="1536350314000" expanded="true" signature="431:537" ph="{...}" />
+            <marker date="1536350314000" expanded="true" signature="591:987" ph="{...}" />
+            <marker date="1536350314000" expanded="true" signature="737:809" ph="{...}" />
+            <marker date="1536350314000" expanded="true" signature="837:900" ph="{...}" />
+            <marker date="1536350314000" expanded="true" signature="929:984" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor/ChangeColor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1536350242000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536350242000" expanded="true" signature="120:1420" ph="{...}" />
+            <marker date="1536350242000" expanded="true" signature="327:427" ph="{...}" />
+            <marker date="1536350242000" expanded="true" signature="430:1394" ph="/* void OnGUI() ... */" />
+            <marker date="1536350242000" expanded="true" signature="1411:1418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Migration/PlayerInput.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="540">
+          <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
-            <marker date="1536352852000" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536352852000" expanded="true" signature="120:557" ph="{...}" />
-            <marker date="1536352852000" expanded="true" signature="267:333" ph="{...}" />
-            <marker date="1536352852000" expanded="true" signature="387:555" ph="{...}" />
-            <marker date="1536352852000" expanded="true" signature="417:448" ph="{...}" />
-            <marker date="1536352852000" expanded="true" signature="475:551" ph="{...}" />
+            <marker date="1536426189000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1536426189000" expanded="true" signature="120:914" ph="{...}" />
+            <marker date="1536426189000" expanded="true" signature="382:622" ph="{...}" />
+            <marker date="1536426189000" expanded="true" signature="676:912" ph="{...}" />
+            <marker date="1536426189000" expanded="true" signature="706:772" ph="{...}" />
+            <marker date="1536426189000" expanded="true" signature="799:908" ph="{...}" />
           </folding>
         </state>
       </provider>
