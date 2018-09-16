@@ -18,6 +18,7 @@ public class TreeBehavior : MonoBehaviour
 	
 	
 	
+	
 	void Start () 
 	{
 		_playerSprite = GameObject.Find("Player").GetComponent<SpriteRenderer>();
@@ -26,13 +27,28 @@ public class TreeBehavior : MonoBehaviour
 		m_GameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 		speed = GameObject.Find("Tree Manager").GetComponent<TreeManager>().speed;
 		initialColor = m_SpriteRenderer.GetComponent<SpriteRenderer>().color;
+
+		if (transform.position.y > 0)
+		{
+			transform.rotation = Quaternion.Euler(0,0,180);
+		}
 	}
 
 	
 	
 	void Update ()
 	{
-		transform.position -= transform.right * speed * Time.deltaTime;
+		if (transform.position.y < 0)
+		{
+			transform.position -= transform.right * speed * Time.deltaTime;
+		}
+		
+		if (transform.position.y > 0)
+		{
+			transform.position += transform.right * speed * Time.deltaTime;
+		}
+
+//		transform.position -= transform.right * speed * Time.deltaTime;
 	}
 
 	

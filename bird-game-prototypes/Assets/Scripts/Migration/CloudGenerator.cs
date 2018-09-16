@@ -11,6 +11,9 @@ public class CloudGenerator : MonoBehaviour
 
 	public float timer;
 
+	public float minSpeed;
+	public float maxSpeed;
+
 	public int numOfClouds = 3;
 	
 	// Use this for initialization

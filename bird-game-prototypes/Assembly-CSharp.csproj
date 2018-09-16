@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\ChangeColor\ColorPicker.cs" />
     <Compile Include="Assets\Scripts\ChangeColor\ObjectColor.cs" />
     <Compile Include="Assets\Scripts\ChangeColor\Player.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Magic Woods\ColorManager.cs" />
     <Compile Include="Assets\Scripts\Magic Woods\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\Magic Woods\GameManager.cs" />

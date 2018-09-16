@@ -6,13 +6,17 @@ using UnityEngine;
 public class PlayerBird : MonoBehaviour
 {
 	// Keys for movement
-
 	public KeyCode right;
 	public KeyCode left;
+	
+	// Sprites
+	public Sprite birdUp;
+	public Sprite birdDown;
 	
 	//Keys for changing colors
 	public KeyCode c_Btn1;
 	public KeyCode c_Btn2;
+	public KeyCode c_Btn3;
 	
 	public Color32 pickedColor;
 
@@ -26,7 +30,7 @@ public class PlayerBird : MonoBehaviour
 	public ColorManager m_ColorManager;
 	private Color32 C_pink;
 	private Color32 C_blue;
-	private Color32 C_red;
+	private Color32 C_yellow;
 
 	private Vector3 initialPos;
 	
@@ -40,7 +44,7 @@ public class PlayerBird : MonoBehaviour
 		m_ColorManager = GameObject.Find("Color Manager").GetComponent<ColorManager>();
 		C_pink = m_ColorManager.C_pink;
 		C_blue = m_ColorManager.C_blue;
-		C_red = m_ColorManager.C_red;
+		C_yellow = m_ColorManager.C_yellow;
 
 		initialPos = transform.position;
 	}
@@ -62,7 +66,20 @@ public class PlayerBird : MonoBehaviour
 			transform.position += transform.right * Time.deltaTime * speed;
 		}
 	*/
-		transform.LookAt(Input.mousePosition);
+
+		//Change Sprites
+		if (Input.GetAxis("Mouse Y") > 0)
+		{
+			m_SpriteRenderer.sprite = birdDown;
+		}
+		
+		if (Input.GetAxis("Mouse Y") <= 0)
+		{
+			m_SpriteRenderer.sprite = birdUp;
+		}
+
+
+//		transform.LookAt(Input.mousePosition);
 		// Pick Color
 		if (Input.GetKeyDown(c_Btn1))
 		{
@@ -72,6 +89,11 @@ public class PlayerBird : MonoBehaviour
 		if (Input.GetKeyDown(c_Btn2))
 		{
 			pickedColor = C_blue;
+		}
+
+		if (Input.GetKeyDown(c_Btn3))
+		{
+			pickedColor = C_yellow;
 		}
 
 		if (Input.anyKey == false && transform.position.x != 0)

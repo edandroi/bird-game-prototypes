@@ -11,7 +11,8 @@ public class Clouds : MonoBehaviour
 	void Start ()
 	{
 
-		speed = Random.Range(0.04f, 0.07f);
+		speed = Random.Range(GameObject.Find("Cloud Generator").GetComponent<CloudGenerator>().minSpeed, 
+			GameObject.Find("Cloud Generator").GetComponent<CloudGenerator>().maxSpeed);
 
 	}
 	

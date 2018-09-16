@@ -9,6 +9,10 @@ public class TreeManager : MonoBehaviour
 
 	public GameObject treeObj;
 	public GameObject birdObj;
+
+	public Transform spawnPos1;
+	public Transform spawnPos2;
+	private Transform spawnPos;
 	
 	private float timer;
 	
@@ -18,11 +22,9 @@ public class TreeManager : MonoBehaviour
 
 	// Color Manager
 	public ColorManager m_ColorManager;
-//	Color32 C_pink = new Color32(250,38,148,250);
-//	Color32 C_blue = new Color32(72,194,212,250);
 	private Color32 C_pink;
 	private Color32 C_blue;
-	private Color32 C_red;
+	private Color32 C_yellow;
 	
 	// Use this for initialization
 	void Start ()
@@ -33,8 +35,7 @@ public class TreeManager : MonoBehaviour
 		m_ColorManager = GameObject.Find("Color Manager").GetComponent<ColorManager>();
 		C_pink = m_ColorManager.C_pink;
 		C_blue = m_ColorManager.C_blue;
-		C_red = m_ColorManager.C_red;
-
+		C_yellow = m_ColorManager.C_yellow;
 	}
 	
 	// Update is called once per frame
@@ -45,8 +46,19 @@ public class TreeManager : MonoBehaviour
 		// Time to instantiate trees
 		if (timer < 0)
 		{
+			switch (Random.Range(0, 2))
+			{
+				case 0:
+					spawnPos = spawnPos1;
+					break;
+				
+				case 1:
+					spawnPos = spawnPos2;
+					break;
+					
+			}
 			// Instantiate tree
-			var newTree = Instantiate(treeObj, transform.position, Quaternion.identity) as GameObject;
+			var newTree = Instantiate(treeObj, spawnPos.position,Quaternion.identity) as GameObject;
 			newTree.transform.parent = gameObject.transform;
 			
 			//Instantiate BIRDS
@@ -55,7 +67,7 @@ public class TreeManager : MonoBehaviour
 			newBird.transform.parent = newTree.transform;
 			
 			Color newBirdColor = new Color(0, 0, 0, 0);
-			int colorNum = Random.Range(0, numOfColors);
+			int colorNum = Random.Range(0, 3);
 			switch (colorNum)
              			{
              			case 0:
@@ -64,6 +76,9 @@ public class TreeManager : MonoBehaviour
              			case 1 :
 				             newBirdColor = C_blue;
              				break;
+             			case 2:
+				             newBirdColor = C_yellow;
+				             break;
              			}
 			newBird.GetComponent<SpriteRenderer>().color = newBirdColor;
 
