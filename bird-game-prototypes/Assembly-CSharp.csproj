@@ -58,7 +58,23 @@
     <Compile Include="Assets\Scripts\ChangeColor\ColorPicker.cs" />
     <Compile Include="Assets\Scripts\ChangeColor\ObjectColor.cs" />
     <Compile Include="Assets\Scripts\ChangeColor\Player.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\ColorManager.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\FollowMouse.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\LookToMouse.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\PlayerBird.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\RotationLimit.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\TreeBehavior.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\TreeKillzone.cs" />
+    <Compile Include="Assets\Scripts\Magic Woods\TreeManager.cs" />
+    <Compile Include="Assets\Scripts\Migration\BirdManager.cs" />
+    <Compile Include="Assets\Scripts\Migration\CloudGenerator.cs" />
+    <Compile Include="Assets\Scripts\Migration\Clouds.cs" />
+    <Compile Include="Assets\Scripts\Migration\GoalSpawn.cs" />
+    <Compile Include="Assets\Scripts\Migration\lineMoveLeft.cs" />
+    <Compile Include="Assets\Scripts\Migration\m_GameManager.cs" />
     <Compile Include="Assets\Scripts\Migration\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Migration\Score.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/edanurkuntman/Documents/NYU/Classes/2018prototypes/bird-game-prototypes/bird-game-prototypes/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour
 
 	public KeyCode up;
 	private Rigidbody2D rb;
-	float force = 100f;
+	float force = 120f;
 	private float currentForce;
 
 	private SpriteRenderer playerSprite;
@@ -15,14 +15,24 @@ public class PlayerInput : MonoBehaviour
 	public Sprite birdUp;
 	public Sprite birdDown;
 
+	private GameObject birdManager;
+	private BirdManager b_Manager;
 	
-	// Use this for initialization
+	private SpriteRenderer m_SpriteRenderer;
+	public Color m_NewColor;
+
+
+	public int score;
+	
+
 	void Start ()
 	{
-//		sprites = Resources.LoadAll<Sprite>("bird-blue-1", "bird-blue-2");
 		rb = GetComponent<Rigidbody2D>();
 		playerSprite = GetComponent<SpriteRenderer>();
-//		birdDown = Resources.Load<Sprite>("bird-blue-2");
+
+		birdManager = GameObject.Find("Bird Manager");
+		b_Manager = birdManager.GetComponent<BirdManager>();
+		
 		currentForce = force;
 	}
 	
@@ -32,7 +42,7 @@ public class PlayerInput : MonoBehaviour
 		
 		if (Input.GetKey(up))
 		{
-			currentForce += 10;
+			currentForce += 5;
 			playerSprite.sprite = birdDown;
 		}
 
@@ -44,4 +54,22 @@ public class PlayerInput : MonoBehaviour
 		}
 
 	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.name == "Border")
+		{
+			rb.velocity = Vector2.zero;
+		}
+		
+		if (other.gameObject.name == "Bird Killzone")
+		{
+			b_Manager.RemoveBirds(gameObject);
+		}
+		if (other.gameObject.tag == "score")
+		{
+			score++;
+		}
+	}
+
 }
