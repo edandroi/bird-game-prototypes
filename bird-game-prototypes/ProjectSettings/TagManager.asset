@@ -9,6 +9,7 @@ TagManager:
   - score
   - tree
   - color detector
+  - bullet
   layers:
   - Default
   - TransparentFX

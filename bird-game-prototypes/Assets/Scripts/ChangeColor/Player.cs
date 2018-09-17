@@ -27,7 +27,8 @@ public class Player : MonoBehaviour
 	public ColorManager m_ColorManager;
 	private Color32 C_pink;
 	private Color32 C_blue;
-	
+
+	public CameraShake camShake;
 	
 	// Use this for initialization
 	void Start () 
@@ -38,7 +39,9 @@ public class Player : MonoBehaviour
 		m_ColorManager = GameObject.Find("Color Manager").GetComponent<ColorManager>();
 		C_pink = m_ColorManager.C_pink;
 		C_blue = m_ColorManager.C_blue;
-		
+
+	
+
 	}
 	
 	// Update is called once per frame

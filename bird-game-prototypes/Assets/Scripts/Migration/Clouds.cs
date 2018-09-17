@@ -28,5 +28,10 @@ public class Clouds : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		
+		if (other.gameObject.CompareTag("killzone"))
+		{
+			Destroy(gameObject);
+		}
 	}
 }

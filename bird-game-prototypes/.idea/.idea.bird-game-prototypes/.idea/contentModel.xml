@@ -13,6 +13,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraControl.cs" t="Include" />
           <e p="ChangeColor" t="Include">
             <e p="ChangeColor.cs" t="Include" />
             <e p="ColorPicker.cs" t="Include" />
@@ -20,8 +21,11 @@
             <e p="Player.cs" t="Include" />
           </e>
           <e p="Magic Woods" t="Include">
+            <e p="BulletBehavior.cs" t="Include" />
             <e p="BulletManager.cs" t="Include" />
+            <e p="CameraShake.cs" t="Include" />
             <e p="ColorManager.cs" t="Include" />
+            <e p="FlightSpeed.cs" t="Include" />
             <e p="FollowMouse.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="LookToMouse.cs" t="Include" />

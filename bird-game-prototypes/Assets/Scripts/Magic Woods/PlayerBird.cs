@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerBird : MonoBehaviour
 {
+	public CameraShake camShake;
+	
 	// Keys for movement
 	public KeyCode right;
 	public KeyCode left;
@@ -47,25 +49,27 @@ public class PlayerBird : MonoBehaviour
 		C_yellow = m_ColorManager.C_yellow;
 
 		initialPos = transform.position;
+		
+		camShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
 	}
 	
-	// Update is called once per frame
+
 	void Update ()
 	{
+		PlayerInput();
+	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag("bullet"))
+		{
+			camShake.ShakeCamera();
+		}
+	}
+
+	void PlayerInput()
+	{
 		m_SpriteRenderer.color = pickedColor;
-	/*
-		// Player Rotation
-		if (Input.GetKey(right))
-		{
-			transform.Rotate(transform.forward, angle * -1.0f);
-			transform.position += transform.right * Time.deltaTime * speed;
-		}
-		if (Input.GetKey(left))
-		{
-			transform.Rotate(transform.forward, angle);
-			transform.position += transform.right * Time.deltaTime * speed;
-		}
-	*/
 
 		//Change Sprites
 		if (Input.GetAxis("Mouse Y") > 0)
@@ -78,8 +82,6 @@ public class PlayerBird : MonoBehaviour
 			m_SpriteRenderer.sprite = birdUp;
 		}
 
-
-//		transform.LookAt(Input.mousePosition);
 		// Pick Color
 		if (Input.GetKeyDown(c_Btn1))
 		{
@@ -100,5 +102,7 @@ public class PlayerBird : MonoBehaviour
 		{
 			transform.position = Vector3.Lerp(transform.position, initialPos, Time.deltaTime);
 		}
+		
 	}
+
 }

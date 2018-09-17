@@ -10,10 +10,15 @@ public class GameManager : MonoBehaviour
 
 	public int score;
 	
+	// Fly Speed
+	private FlightSpeed m_FlightSpeed;
+	private float flightSpeed;
+	
 
 	void Start ()
 	{
 		m_TreeManager = GameObject.Find("Tree Manager").GetComponent<TreeManager>();
+		m_FlightSpeed = GameObject.Find("Flight Speed").GetComponent<FlightSpeed>();
 	}
 	
 
@@ -29,5 +34,10 @@ public class GameManager : MonoBehaviour
 			Debug.Log("You win!");
 		}
 
+	}
+	
+	private void FlightSpeed()
+	{
+		flightSpeed = m_FlightSpeed.flightSpeed;
 	}
 }

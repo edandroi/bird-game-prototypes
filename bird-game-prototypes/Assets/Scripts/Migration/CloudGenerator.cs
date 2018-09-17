@@ -52,7 +52,7 @@ public class CloudGenerator : MonoBehaviour
 					break;
 					
 			}
-			timer = Random.Range(1f, 2f);
+			timer = Random.Range(1f, 4f);
 		}
 
 	}

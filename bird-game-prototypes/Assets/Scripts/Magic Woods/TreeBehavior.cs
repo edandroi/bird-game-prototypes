@@ -23,7 +23,7 @@ public class TreeBehavior : MonoBehaviour
 	{
 		_playerSprite = GameObject.Find("Player").GetComponent<SpriteRenderer>();
 		m_SpriteRenderer = GetComponent<SpriteRenderer>();
-		b_SpriteRenderer = transform.FindChild("parrot-w(Clone)").GetComponent<SpriteRenderer>();
+		b_SpriteRenderer = transform.Find("parrot-w(Clone)").GetComponent<SpriteRenderer>();
 		m_GameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 		speed = GameObject.Find("Tree Manager").GetComponent<TreeManager>().speed;
 		initialColor = m_SpriteRenderer.GetComponent<SpriteRenderer>().color;
